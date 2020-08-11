@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 
 
-class DashBoard extends StatelessWidget{
+class ClaimHistory extends StatelessWidget{
     @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
-      //   title: Text('DashBoard'),
+      //   title: Text('Claim History'),
       //   centerTitle: true,
       //   backgroundColor: Colors.redAccent,
       // ),
       body: Center(
         child :FlatButton.icon(
           textColor: Colors.white,
-          label: Text("Cretae Claim"),
+          label: Text("History"),
           color: Colors.redAccent[200],
           icon: Icon(Icons.create, size: 18),
           onPressed: () {
-            Navigator.pushNamed(context, '/claim');
           },
         ),
       ),

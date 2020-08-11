@@ -24,11 +24,11 @@ class _ClaimState extends State<Claim> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Create Claim'),
-          centerTitle: true,
-          backgroundColor: Colors.redAccent,
-        ),
+        // appBar: AppBar(
+        //   title: Text('Create Claim'),
+        //   centerTitle: true,
+        //   backgroundColor: Colors.redAccent,
+        // ),
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(10),

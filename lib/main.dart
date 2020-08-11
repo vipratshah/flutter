@@ -1,7 +1,26 @@
+import 'package:firstapp/app.dart';
+import 'package:firstapp/pages/login.dart';
 import 'package:flutter/material.dart';
-import 'app.dart';
 
 void main() {
-  runApp(App());
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Claim Management System',
+      theme: new ThemeData(
+        primarySwatch: Colors.redAccent[300],
+      ),
+      routes: {
+        '/': (context) => Login(),
+        '/home': (context) => Login(),
+        '/dashboard': (context) => HomePage(),
+      },
+    );
+  }
 }
 
