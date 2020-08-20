@@ -1,19 +1,16 @@
-import 'dart:convert';
 
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import '../models/claim.dart';
 
-class ClaimService{
+class ClaimService {
+  var status = '';
 
-  bool isSuccess = false;
-
-  Future<void> saveClaim(ClaimModel claimdata) async{
+  Future<void> saveClaim(ClaimModel claimdata) async {
     print('service called :' + claimdata.totalAmount);
 
-    Response response = await get('');
-    Map data =jsonDecode(response.body);
-
-    isSuccess = data['isSuccess'];
+    var url = 'http://dummy.restapiexample.com/api/v1/create';
+    var response = await http
+        .post(url, body: {"name": "test", "salary": "123", "age": "23"});
+    print('Response status: ${response.statusCode}');
   }
-
 }
